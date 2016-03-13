@@ -1,0 +1,31 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bubble sorting</title>
+    <link rel="stylesheet" href="all.css" type="text/css"/>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="form-holder">
+        <h1>Enter numbers to see bubble sorting</h1>
+        <span>Separate your numbers with a comma</span>
+        <form id="myForm" action="#">
+          <input type="text" name="text">
+          <input type="submit" value="sort">
+        </form>
+        <span id="info"></span>
+      </div>
+      <div id="numbers-holder" class="hidden">
+        <h1>Your numbers:</h1>
+        <div id="numbers-list"></div>
+        <div id="buttons-holder">
+          <button id="cancel-button">cancel</button>
+          <button id="try-again-button" class="hidden">try again</button>
+          <button id="next-button">next</button>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
