@@ -9,7 +9,7 @@ var cancelButton = document.getElementById("cancel-button");
 var nextButton = document.getElementById("next-button");
 var tryAgainButton = document.getElementById("try-again-button");
 
-var checkArray = function (array) { //logic
+var checkArray = function (array) { 
 	if (array.length > 1) {
 		for (var i = 0; i < array.length; i++) {
 	  		if (isNaN(+array[i]) || array[i] == "") {
@@ -22,13 +22,13 @@ var checkArray = function (array) { //logic
 	return true;
 }
 
-function compareElementsValue(element1, element2) { //logic
+function compareElementsValue(element1, element2) { 
 	var temp = 0;
 	return (+element1.innerText > +element2.innerText);
 }
 	
 
-function createListOfNumbers (userNumbers, parentElement) { //view
+function createListOfNumbers (userNumbers, parentElement) { 
 	var ulElement = document.createElement("ul");
   	for (var i = 0; i < userNumbers.length; i++) {
 		var numbersLi = document.createElement("li");
@@ -38,14 +38,14 @@ function createListOfNumbers (userNumbers, parentElement) { //view
   	parentElement.appendChild(ulElement);
 }
 
-function clearNumbersUl (parentElement) { //view
+function clearNumbersUl (parentElement) { 
 	var numbersUl = parentElement.getElementsByTagName("ul")[0];
 	if (numbersUl !== undefined) {
 		numbersUl.parentNode.removeChild(numbersUl);		
 	}
 }
 
-function classesReAssignment (elements, switchedOrNot) { //view
+function classesReAssignment (elements, switchedOrNot) { 
 	for (var i = 0; i < elements.length; i++) {
 		if (switchedOrNot) {
 			if (elements[i].classList.contains("current") && elements[i].classList.contains("changing")) {
@@ -59,13 +59,13 @@ function classesReAssignment (elements, switchedOrNot) { //view
 	}
 }
 
-function addClass (elements, nameOfClass) { //view
+function addClass (elements, nameOfClass) { 
 	for (var i = 0; i < elements.length; i++) {
 		elements[i].classList.add(nameOfClass);
 	}
 }
 
-function alreadySorted () { //view
+function alreadySorted () { 
 	numbersUl = numbersList.getElementsByTagName("ul")[0];
 	numbersUl.classList.add("changed");
 	message.innerText = "Numbers are sorted!";
@@ -74,14 +74,16 @@ function alreadySorted () { //view
 	tryAgainButton.classList.remove("hidden");
 }
 
-function incorrectValues () { //view
+function incorrectValues () { 
 	formHolder.classList.remove("hidden");
+	numbersHolder.classList.add("hidden");
 	info.innerText = "Incorrect values. Please, enter numbers";
 	formHolder.appendChild(info);
 }
 
-function newSoring() { //view
+function newSoring() { 
 	formHolder.classList.remove("hidden");
+	info.innerText = "";
 	numbersHolder.classList.add("hidden");
 	clearNumbersUl(numbersList);
 };
@@ -98,7 +100,6 @@ var buildInterface = function () {
   form.elements.text.value = "";
   formHolder.classList.add("hidden");
   numbersHolder.classList.remove("hidden");
-
   nextButton.classList.remove("hidden");
 
   if (checkArray(userArray)) {
