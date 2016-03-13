@@ -1,0 +1,84 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font: 14px/1 arial, helvetica, sans-serif;
+	margin: 0;
+	background: #FFF8DC;
+}
+ul {
+	padding: 0;
+	margin: 20px 0 40px;
+	list-style: none;
+	overflow: hidden;
+	display: inline-block;
+}
+li {
+	float: left;
+	padding: 10px;
+	border: 1px solid #ccc;
+	-webkit-transition: all, 0.2s;
+	-moz-transition: all, 0.2s;
+	-ms-transition: all, 0.2s;
+	-o-transition: all, 0.2s;
+	transition: all, 0.2s;
+}
+#wrapper {
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+}
+input {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin: 0 10px;
+}
+h1 {
+	margin: 70px 40px 30px;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+button, input[type="submit"] {
+	width: 90px;
+	padding: 10px 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	text-transform: uppercase;
+	margin: 0 10px;
+	cursor: pointer;
+	-webkit-transition: all, 0.1s;
+	-moz-transition: all, 0.1s;
+	-ms-transition: all, 0.1s;
+	-o-transition: all, 0.1s;
+	transition: all, 0.1s;
+}
+button#cancel-button {
+	background: red;
+}
+button#next-button, input[type="submit"] {
+	background: GreenYellow;
+}
+input[type="submit"]:hover, button:hover {
+	box-shadow: 0px 0px 5px #ccc;
+}
+input:focus, button:focus {
+	outline: none;
+}
+span {
+	display: block;
+	font-size: 16px;
+	margin: 30px;
+}
+.current {
+	border: 1px solid #000;
+}
+.changed {
+	background: Gold;
+}
+.changing {
+	background: GreenYellow;
+}
+.hidden {
+	display: none;
+}
